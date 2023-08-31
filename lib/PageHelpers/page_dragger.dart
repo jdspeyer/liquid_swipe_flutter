@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import 'page_reveal.dart';
 
 /// Internal Widget
-///
 /// PageDragger is a Widget that handles user gestures and provide the data to the [LiquidProvider]
 /// from where we perform animations various other methods.
 class PageDragger extends StatefulWidget {

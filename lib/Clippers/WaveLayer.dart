@@ -28,7 +28,7 @@ class WaveLayer extends CustomClipper<Path> {
     Path path = Path();
     sideWidth = sidewidth(size);
     waveVertRadius = waveVertRadiusF(size);
-
+    //// THIS ENABLES THE SLIDE IN BOTH DIRECTIONS AND WOULD NEED TO BE CHANGED BACK FOR THE MORE UX FRIENDLY VARIENT.
     waveCenterY = size.height * verReveal;
     waveHorRadius = slideDirection == SlideDirection.leftToRight
         ? waveHorRadiusF(size)
