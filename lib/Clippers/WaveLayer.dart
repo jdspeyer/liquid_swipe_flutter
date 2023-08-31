@@ -31,7 +31,7 @@ class WaveLayer extends CustomClipper<Path> {
 
     waveCenterY = size.height * verReveal;
     waveHorRadius = slideDirection == SlideDirection.leftToRight
-        ? waveHorRadiusFBack(size)
+        ? waveHorRadiusF(size)
         : waveHorRadiusF(size);
 
     var maskWidth = size.width - sideWidth;

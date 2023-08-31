@@ -5,10 +5,9 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 
 void main() {
   /// Comment or uncomment to run both examples
-  runApp(
-      WithBuilder()
+  runApp(WithBuilder()
       // WithPages()
-  );
+      );
 }
 
 ///Class to hold data for itembuilder in Withbuilder app.
@@ -156,9 +155,9 @@ class _WithBuilder extends State<WithBuilder> {
                 child: TextButton(
                   onPressed: () {
                     liquidController.animateToPage(
-                        page: data.length - 1, duration: 700);
+                        page: liquidController.currentPage - 1);
                   },
-                  child: Text("Skip to End"),
+                  child: Text("Back"),
                   style: TextButton.styleFrom(
                       backgroundColor: Colors.white.withOpacity(0.01),
                       foregroundColor: Colors.black),
@@ -171,10 +170,8 @@ class _WithBuilder extends State<WithBuilder> {
                 padding: const EdgeInsets.all(25.0),
                 child: TextButton(
                   onPressed: () {
-                    liquidController.jumpToPage(
-                        page: liquidController.currentPage + 1 > data.length - 1
-                            ? 0
-                            : liquidController.currentPage + 1);
+                    liquidController.animateToPage(
+                        page: liquidController.currentPage + 1);
                   },
                   child: Text("Next"),
                   style: TextButton.styleFrom(
